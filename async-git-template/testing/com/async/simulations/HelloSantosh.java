@@ -8,6 +8,6 @@ public class HelloSantosh {
 	}
 	
 	static void raj() {
-		
+		System.out.println("h");
 	}
 }
