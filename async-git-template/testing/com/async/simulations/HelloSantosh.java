@@ -7,5 +7,7 @@ public class HelloSantosh {
 		System.out.println("The Xpose!!");
 	}
 	
-	static void raj() {}
+	static void raj() {
+		
+	}
 }
