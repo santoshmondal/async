@@ -6,4 +6,6 @@ public class HelloSantosh {
 		System.out.println();
 		System.out.println("The Xpose!!");
 	}
+	
+	static void raj() {}
 }
