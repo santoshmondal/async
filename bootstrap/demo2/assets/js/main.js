@@ -12,3 +12,13 @@ $(function(){
         $('.mini-submenu').hide();
 	})
 })
+
+
+// document -- once page load
+$(function(){
+	$("#btn-create-user").click(function(){
+		console.log("Create user log...");		
+		var formdata = $("#frm-create-user").serialize();
+		console.log(formdata);
+	});
+});
