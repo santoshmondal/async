@@ -1,0 +1,10 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"folder_exclude_patterns" :["system", "user_guide"],
+			"file_exclude_patterns" :["*.rst", "license.txt", "*.md"]
+		}
+	]
+}
