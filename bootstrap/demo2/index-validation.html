@@ -192,7 +192,7 @@
 									  </div>
 									  <div class="form-group">
 									    <div class="col-sm-offset-2 col-sm-10">
-									      <button type="submit" class="btn btn-info">Sign in</button>
+									      <button id='bid' type="button" class="btn btn-info">Sign in</button>
 									    </div>
 									  </div>
 									</form>		
@@ -254,54 +254,6 @@
 	                <td>Jacob</td>
 	                <td>Thornton</td>
 	                <td>@fat</td>
-	              </tr>
-	              <tr>
-	                <td>3</td>
-	                <td>Larry</td>
-	                <td>the Bird</td>
-	                <td>@twitter</td>
-	              </tr>
-	              <tr>
-	                <td>3</td>
-	                <td>Larry</td>
-	                <td>the Bird</td>
-	                <td>@twitter</td>
-	              </tr>
-	              <tr>
-	                <td>3</td>
-	                <td>Larry</td>
-	                <td>the Bird</td>
-	                <td>@twitter</td>
-	              </tr>
-	              <tr>
-	                <td>3</td>
-	                <td>Larry</td>
-	                <td>the Bird</td>
-	                <td>@twitter</td>
-	              </tr>
-	              <tr>
-	                <td>3</td>
-	                <td>Larry</td>
-	                <td>the Bird</td>
-	                <td>@twitter</td>
-	              </tr>
-	              <tr>
-	                <td>3</td>
-	                <td>Larry</td>
-	                <td>the Bird</td>
-	                <td>@twitter</td>
-	              </tr>
-	              <tr>
-	                <td>3</td>
-	                <td>Larry</td>
-	                <td>the Bird</td>
-	                <td>@twitter</td>
-	              </tr>
-	              <tr>
-	                <td>3</td>
-	                <td>Larry</td>
-	                <td>the Bird</td>
-	                <td>@twitter</td>
 	              </tr>
 	              <tr>
 	                <td>3</td>
@@ -678,24 +630,31 @@
 
 <script type="text/javascript">
 $(function(){
-	$("#theform").validate({
-		rules: {
-			example4: {email:true, required: true},
-			example5: {required: true}
-		},
-		messages: {
-			example5: "Just check the box"
-		},
-		tooltip_options: {
-			example4: {trigger:'focus'},
-			example5: {placement:'bottom',html:true}
-		},
-		highlight: function(element) {
-            $(element).closest('.form-group').addClass('has-error');
-        },
-        unhighlight: function(element) {
-            $(element).closest('.form-group').removeClass('has-error');
-        }
+
+	$("#bid").click(function(){
+		console.log("HELLO");
+		var form = $( "#theform" );
+		$(form).validate({
+			rules: {
+				example4: {email:true, required: true},
+				example5: {required: true}
+			},
+			messages: {
+				example5: "Just check the box"
+			},
+			tooltip_options: {
+				example4: {trigger:'focus'},
+				example5: {placement:'bottom',html:true}
+			},
+			highlight: function(element) {
+	            $(element).closest('.form-group').addClass('has-error');
+	        },
+	        unhighlight: function(element) {
+	            $(element).closest('.form-group').removeClass('has-error');
+	        }
+		});
+
+		console.log(form.valid());	
 	});
 });	
 </script>
